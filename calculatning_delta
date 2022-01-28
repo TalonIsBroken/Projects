@@ -1,0 +1,43 @@
+# My first, smoll project. After all, I am proud of it! ( I wrote it in my native language and im way too lazy to translate this XD )
+
+import math
+print("Dziś będziemy używać funkcji kwadratowej w celu obliczenia miejsc zerowych za pomocą delty! ")
+
+print()
+
+print("Ogólny wzór funkcji kwadratowej reprezntuje się następująco: ax^2 + bx + c = f(x) ")
+
+print()
+
+a = input("Podaj dowolną zmienną A, dla liczb rzeczywistych, dla ax^2: ")
+b = input("Podaj zmienną B, dla liczb rzeczywistych, dla bx:  ")
+c = input("Podaj zmienną C, dla liczb rzeczywistych, dla c: ")
+yx = input("Podaj wartość f(x), zwanej też y: ")
+
+if float(yx) >= 0:
+    c = float(c) + (float(yx) * -1)
+else:
+    c = float(c) + (float(yx))
+
+delta = (float(b) ** 2) - 4 * float(a) * float(c)
+
+print()
+
+if delta < 0:
+    print("Możesz się opie**alać!")
+#
+if delta == 0:
+    b = int(b) * -1
+    bz = int(b) / (int(a) * 2)
+    print("Delta równa zeru ma jedno miejsce zerowe, na które wzór wygląda następująco: -b/2a ")
+    print()
+    print(bz)
+# #
+if delta > 0:
+    sqdelta = math.sqrt(float(delta))
+    b = float(b) * -1
+    bz = float(b) / (float(a) * 2)
+
+    x1 = (float(bz)) - (float(sqdelta)) / (float(a) * 2)
+    x2 = (float(bz)) + (float(sqdelta)) / (float(a) * 2)
+    print(float(x1), "oraz ", float(x2), "to miejsca zerowe funkcji. ")
