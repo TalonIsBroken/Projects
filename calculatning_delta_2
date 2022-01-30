@@ -1,0 +1,44 @@
+I upgraded my delta program with a new, beatiful feature :D
+
+import math
+
+print("Dziś będziemy używać funkcji kwadratowej w celu obliczenia miejsc zerowych za pomocą delty! ")
+
+print()
+
+print("Ogólny wzór funkcji kwadratowej reprezntuje się następująco: ax^2 + bx + c = f(x) ")
+
+print()
+
+funkcja_kwadratowa = input("Podaj zmienne chuju jebany:").split(" ")
+a, b, c, yx = map(float, funkcja_kwadratowa)
+
+print()
+
+if float(yx) >= 0:
+    c = float(c) + (float(yx) * -1)
+else:
+    c = float(c) + (float(yx))
+
+delta = (float(b) ** 2) - 4 * float(a) * float(c)
+
+print()
+
+if delta < 0:
+    print("Możesz się opierdalać, bo delta poniżej zera jest nic nie warta!!! ")
+#
+if delta == 0:
+    b = int(b) * -1
+    bz = int(b) / (int(a) * 2)
+    print("Delta równa zeru ma jedno miejsce zerowe, na które wzór wygląda następująco: -b/2a ")
+    print()
+    print(bz)
+# #
+if delta > 0:
+    sqdelta = math.sqrt(float(delta))
+    b = float(b) * -1
+    bz = float(b) / (float(a) * 2)
+
+    x1 = (float(bz)) - (float(sqdelta)) / (float(a) * 2)
+    x2 = (float(bz)) + (float(sqdelta)) / (float(a) * 2)
+    print(float(x1), "oraz ", float(x2), "to miejsca zerowe funkcji. ")
